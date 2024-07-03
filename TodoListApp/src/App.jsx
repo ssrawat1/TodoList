@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { TodoProvider } from "./contexts/TodoContext";
 import TodoForm from "./components/TodoForm";
 import TodoItem from "./components/TodoItem";
-import "./App.css";  
+import "./App.css";
 
 const App = () => {
   const [todos, setTodos] = useState([]);
@@ -20,7 +20,7 @@ const App = () => {
   const updateTodo = (id, todo) => {
     setTodos((prevTodo) =>
       prevTodo.map((initialTodo) =>
-        initialTodo.id === id ? { id, ...todo } : initialTodo
+        initialTodo.id === id ? todo : initialTodo
       )
     );
   };
